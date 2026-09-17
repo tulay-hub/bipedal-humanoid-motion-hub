@@ -21,7 +21,7 @@
 | 行走 | [walk-dwaq-ppo-beta-vae](https://github.com/tulay-hub/walk-dwaq-ppo-beta-vae) | DWAQ + PPO + beta-VAE | 76 / 380 -> 21 |
 | 跌倒起身 | [fall-to-stand-amp-getup](https://github.com/tulay-hub/fall-to-stand-amp-getup) | AMP GetUp | 288 -> 21 |
 | 翻滚 | [side-roll-deepmimic](https://github.com/tulay-hub/side-roll-deepmimic) | DeepMimic SideRoll | 159 -> 21 |
-| 上台阶 | [stairs-dwaq-ppo-beta-vae](https://github.com/tulay-hub/stairs-dwaq-ppo-beta-vae) | DWAQ + stair curriculum | 21 actions |
+| 盲走上台阶 | [stairs-dwaq-ppo-beta-vae](https://github.com/tulay-hub/stairs-dwaq-ppo-beta-vae) | DWAQ + stair curriculum | 21 actions |
 | 共享框架 | [isaaclab-shared-dwaq-deepmimic](https://github.com/tulay-hub/isaaclab-shared-dwaq-deepmimic) | Isaac Lab + DWAQ + DeepMimic | task and MuJoCo base |
 | GMR 重定向 | [gmr-retargeting](https://github.com/tulay-hub/gmr-retargeting) | GMR + BVH + robot IK | human -> robot |
 | Robot 重定向 | [robot-retargeter-smplx](https://github.com/tulay-hub/robot-retargeter-smplx) | SMPL-X + URDF/MJCF | body -> robot |
