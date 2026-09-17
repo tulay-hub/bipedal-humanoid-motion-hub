@@ -10,7 +10,7 @@
 
 ## 中文
 
-这是一个面向双足人形机器人动作重定向、模仿学习、盲行走、楼梯行走、跌倒起身、侧滚、MuJoCo sim2sim 和 ROS2 真机部署的完整工作区。每个任务项目都有独立的代码、数据、导出包和说明，共享框架与数据通过固定 commit 的子模块连接。
+这是一个面向双足人形机器人动作重定向、模仿学习、盲行走、盲走上楼梯、跌倒起身、侧滚、MuJoCo sim2sim 和 ROS2 真机部署的完整工作区。每个任务项目都有独立的代码、数据、导出包和说明，共享框架与数据通过固定 commit 的子模块连接。
 
 ## 项目导航
 
@@ -169,7 +169,7 @@ r_track = exp(-||error||^2 / std^2)
 | DWAQ 行走 | velocity +2.5/+3.0；body stability；energy；smoothness；foot safety；termination -200；alive +0.15；idle -2.0；gait reference +0.5/+0.2 |
 | AMP GetUp | zero velocity +1/+1；root height +5；upright +2；stand foot slip -2；over-height air -20；gated flat sole +0.6；termination -200 |
 | SideRoll | 159-D 基础跟踪；允许滚地接触；height minimum 0.02m；deviation 0.8m；alive 0.05；standing-still -2.0 |
-| Stairs | 复用 DWAQ reward，增加 terrain row 0、约 5..30cm 楼梯路径、连续成功升阶和失败降阶 |
+| 盲走上楼梯 | 复用 DWAQ reward，增加 terrain row 0、约 5..30cm 楼梯路径、连续成功升阶和失败降阶 |
 
 完整奖励项、权重、代码路径见 [docs/REWARD_FRAMEWORKS.md](docs/REWARD_FRAMEWORKS.md)。
 
@@ -232,7 +232,7 @@ bash deployment/infer_zero/infer_zero/scripts/infer_zero.sh
 
 ## English
 
-This repository is the navigation hub for bipedal humanoid robot motion retargeting, imitation learning, blind locomotion, stair locomotion, fall recovery, side rolling, MuJoCo sim2sim, and ROS2 real-robot deployment. Each task repository owns its code, data, exports, scripts, and bilingual documentation. Shared dependencies are pinned with submodules.
+This repository is the navigation hub for bipedal humanoid robot motion retargeting, imitation learning, blind locomotion, blind stair walking, fall recovery, side rolling, MuJoCo sim2sim, and ROS2 real-robot deployment. Each task repository owns its code, data, exports, scripts, and bilingual documentation. Shared dependencies are pinned with submodules.
 
 ## Project map
 
@@ -243,7 +243,7 @@ This repository is the navigation hub for bipedal humanoid robot motion retarget
 | Walking | [walk-dwaq-ppo-beta-vae](https://github.com/tulay-hub/walk-dwaq-ppo-beta-vae) | DWAQ + PPO + beta-VAE | 76 / 380 -> 21 |
 | Fall-to-stand | [fall-to-stand-amp-getup](https://github.com/tulay-hub/fall-to-stand-amp-getup) | AMP GetUp | 288 -> 21 |
 | Side roll | [side-roll-deepmimic](https://github.com/tulay-hub/side-roll-deepmimic) | DeepMimic SideRoll | 159 -> 21 |
-| Stairs | [stairs-dwaq-ppo-beta-vae](https://github.com/tulay-hub/stairs-dwaq-ppo-beta-vae) | DWAQ + stair curriculum | 21 actions |
+| Blind stair walking | [stairs-dwaq-ppo-beta-vae](https://github.com/tulay-hub/stairs-dwaq-ppo-beta-vae) | DWAQ + blind stair curriculum | 76 / 380 -> 21 |
 | Shared framework | [isaaclab-shared-dwaq-deepmimic](https://github.com/tulay-hub/isaaclab-shared-dwaq-deepmimic) | Isaac Lab + DWAQ + DeepMimic | task and MuJoCo base |
 | GMR retargeting | [gmr-retargeting](https://github.com/tulay-hub/gmr-retargeting) | GMR + BVH + robot IK | human -> robot |
 | Robot retargeting | [robot-retargeter-smplx](https://github.com/tulay-hub/robot-retargeter-smplx) | SMPL-X + URDF/MJCF | body -> robot |
