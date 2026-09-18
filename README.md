@@ -41,7 +41,7 @@ English: GetUp combines AMP, expert-transition/state guidance and backward-chain
 | GMR 重定向 | [gmr-retargeting](https://github.com/tulay-hub/gmr-retargeting) | GMR + BVH + robot IK | human -> robot |
 | Robot 重定向 | [robot-retargeter-smplx](https://github.com/tulay-hub/robot-retargeter-smplx) | SMPL-X + URDF/MJCF | body -> robot |
 | 舞蹈数据 | [dance-dataset](https://github.com/tulay-hub/dance-dataset) | BVH dataset | raw motion |
-| G1 数据说明 | [g1-motion-dataset](https://github.com/tulay-hub/g1-motion-dataset) | documentation | 当前不发布 G1 CSV |
+| G1 数据说明 | [g1-motion-dataset](https://github.com/tulay-hub/g1-motion-dataset) | documentation |  G1 CSV |
 
 ## 项目演示
 
